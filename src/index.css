@@ -1,0 +1,261 @@
+/* * {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #202124;
+}
+
+h1,
+h2,
+h3,
+input,
+button {
+  font-family: 'Press Start 2P', system-ui;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 14px;
+  background: #eff6ff;
+  gap: 14px;
+}
+
+header {
+  display: flex;
+  align-items: stretch;
+}
+
+header,
+.main {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  gap: 14px;
+}
+
+header input {
+  flex: 1;
+  border-radius: 14px;
+  outline: none;
+  width: 100%;
+}
+
+header button {
+  border-radius: 14px;
+  background: transparent;
+  transition-duration: 200ms;
+  cursor: pointer;
+}
+
+header button:hover {
+  opacity: 0.7;
+}
+
+header button,
+header input {
+  padding: 14px 18px;
+  border: none;
+  outline: none;
+  background: white;
+}
+
+p {
+  font-size: 0.9em;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.todoItem {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px;
+  border-radius: 14px;
+  background: white;
+}
+
+.todoItem p {
+  flex: 1;
+}
+
+.actionsContainer {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.actionsContainer button {
+  transition-duration: 200ms;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.actionsContainer button:hover {
+  opacity: 0.7;
+}
+
+
+
+@media (min-width: 640px) {
+
+  header button,
+  header input {
+    font-size: 1.2em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+} */
+
+
+
+/* Reset and base styles */
+* {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to right, #e0f2fe, #f0fdf4);
+  color: #111827;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* App Container */
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Header / Input area */
+header {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  max-width: 700px;
+}
+
+header input {
+  flex: 1;
+  padding: 16px 20px;
+  border-radius: 12px;
+  border: 2px solid #cbd5e1;
+  background: #ffffff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+header input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px #bfdbfe;
+  outline: none;
+}
+
+header button {
+  padding: 16px 24px;
+  border: none;
+  background: #3b82f6;
+  color: white;
+  font-weight: bold;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+header button:hover {
+  background: #2563eb;
+}
+
+/* Todo List */
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+  max-width: 700px;
+}
+
+/* Individual Todo Item */
+.todoItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  padding: 16px 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.todoItem:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.todoItem p {
+  margin: 0;
+  flex: 1;
+  font-size: 1rem;
+  word-break: break-word;
+}
+
+/* Action Buttons */
+.actionsContainer {
+  display: flex;
+  gap: 12px;
+}
+
+.actionsContainer button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #4b5563;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.actionsContainer button:hover {
+  color: #111827;
+}
+
+.actionsContainer i.fa-pen-to-square {
+  color: #10b981;
+}
+
+.actionsContainer i.fa-trash-can {
+  color: #ef4444;
+}
+
+.actionsContainer button:hover i.fa-pen-to-square {
+  color: #059669;
+}
+
+.actionsContainer button:hover i.fa-trash-can {
+  color: #dc2626;
+}
+
+/* Responsive typography */
+@media (min-width: 640px) {
+  header input,
+  header button {
+    font-size: 1.1rem;
+  }
+
+  .todoItem p {
+    font-size: 1.05rem;
+  }
+}
